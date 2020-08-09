@@ -28,7 +28,7 @@ install.packages("tidyverse")
 
 In order to import a package into a script you are writing, the `library` function can be used.
 
-```{r, eval=FALSE, message=FALSE}
+```{r, message=FALSE}
 library(tidyverse)
 ```
 
