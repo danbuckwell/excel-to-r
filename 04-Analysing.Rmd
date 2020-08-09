@@ -1,0 +1,27 @@
+# Pivoting
+
+```{r, message=FALSE}
+pivot <- passangers %>%
+  group_by(country) %>% # Group by column
+  summarise(n = n()) %>% # Get the count for each group
+  na.omit() %>% # Remove NA values
+  arrange(desc(n)) %>% # Sort by count
+  top_n(10) %>% # Select top 10 rows
+  mutate(percent = round(n / sum(n) * 100, 1)) # Add percentage of each count
+```
+
+```{r, echo=FALSE}
+pivot
+```
+
+An exact value can be extracted from a table by using `subset`.
+
+```{r, message=FALSE, warning=FALSE}
+subset(pivot$n, pivot$country=="England")
+```
+
+Multiple conditions can be given using the `&` operator.
+
+```{r, eval=FALSE}
+subset(pivot$n, pivot$column1=="value1" & pivot$column2=="value2")
+```

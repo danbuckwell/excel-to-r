@@ -1,0 +1,14 @@
+# Manipulating Data
+
+For this document we will be using the `titanic` data set from the `DALEX` library. A preview of the data can be seen using `head()`.
+
+```{r}
+df <- as_tibble(titanic)
+head(df)
+```
+
+Only select passangers
+```{r}
+passangers <- df %>%
+  filter(class %in% c("1st", "2nd", "3rd"))
+```

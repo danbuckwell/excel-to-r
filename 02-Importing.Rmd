@@ -1,0 +1,32 @@
+# Reading Data
+
+Data can be read into R from many sources.
+
+## Read from csv
+```{r, eval=FALSE}
+df <- read_csv("path/to/file.csv")
+```
+
+## Read from xlsx
+Excel xlsx files can be imported using the `read.xlsx` function from the `xlsx` package.
+```{r, eval=FALSE}
+df <- read.xlsx("path/to/file.xlsx", sheetName = "Sheet1")
+```
+
+## Read from Salesforce
+
+Many organisations utilisae a CRM for storing their customer focused data. This can be imported directly into R using the `RForcecom` package. This allows for queries written in SOQL (Salesforce Object Query Language) to be executed against Salesforce. Details regarding how to structure an SOQL query can be found here: `https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_sosl_intro.htm`.
+
+```{r, eval=FALSE}
+library(RForcecom) # install.packages("RForcecom")
+
+username <- ""
+password <- ""
+security_token <- ""
+
+session <- rforcecom.login(username, paste0(password, security_token))
+
+q <- "SELECT Id, Name FROM Account"
+
+df <- rforcecom.query(session, q)
+```

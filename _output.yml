@@ -1,0 +1,27 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: section
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="">Converting your Knowledge of Excel into R</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    sharing:
+      facebook: no
+      github: no
+      twitter: no
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: []
+    download: []
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+bookdown::epub_book:
+  stylesheet: style.css

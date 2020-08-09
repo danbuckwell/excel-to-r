@@ -1,0 +1,19 @@
+# Plotting
+
+The library `ggplot2` extends the base R plotting functionality to create visually appealing visualisations.
+
+```{r}
+plot <- pivot %>%
+  ggplot(aes(x = reorder(country, n), y = n)) +
+    geom_bar(stat = "identity", fill = "#106E8D") +
+    coord_flip() +
+    theme_minimal() +
+    labs(title = "Nationality of Passangers",
+       subtitle = "Top 10",
+       x = "Nationality",
+       y = "No. Passangers")
+```
+
+```{r, echo=FALSE}
+plot
+```

@@ -1,0 +1,37 @@
+--- 
+title: "Converting your Knowledge of Excel into R"
+author: "Dan Buckwell"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: danbuckwell/
+url: 'http\://danbuckwell.github.io/'
+description: ""
+---
+
+# Preface {-}
+
+In recent years the volume of data stored globally has increased exponentially.
+
+Since it's initial release in 1987, Microsoft Excel has become the industy standard software package for analysing and visulaising data. Boasting a user friendly interface and easy to learn functions, Excel provides a low barrier for entry into the world of data analytics. Providing business users with the ability to quickly create repositories of information and calculate key metrics, Excel can be found at the centre of many organisations.
+
+As with all technology, Excel has wide ranging limitations.
+
+This book aims to provide a foundation for translating existing Excel knowledge into executable R statments.
+
+## Why R? {-}
+
+While Excel is great for performing ad-hoc exploration and manipulation of small data sets, bussiness tend to push it's boundaries without fully exploring the alternatives. R is a programming language designed entirely around the manipulation of large data sets. With the addition of community devloped packages, R contains almost all the functionality of Excel without the limitations.
+
+## Notes
+
+```{r, eval=FALSE}
+bookdown::render_book("index.Rmd")
+```
+
+https://www.researchgate.net/publication/274233315_Scientific_big_data_and_Digital_Earth
+

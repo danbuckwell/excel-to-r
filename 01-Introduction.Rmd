@@ -1,0 +1,42 @@
+# Introduction
+
+This is the first real chapter.
+
+## Prerequisites
+
+In order to follow along with this book, there are several prerequisites. This book is designed to people that are already familier with the basic functionality of Excel and it's most common functions and features. While an overview will be given, it assumes an existing intermediate understanding.
+
+Along with preexisting knowledge, you will also require specific software.
+
+### R
+
+R is the programming language this book is built around and is freely available from `https://www.r-project.org`. Version `4.0.2` was used to write this book but everything contained within should be available in newer versions.
+
+### RStudio
+
+RStudio is the most popular IDE for R. If you have not used an IDE before, it provides many features that are designed to aid you to write R code. A free download is available from `https://rstudio.com`.
+
+### Packages
+
+Packages are a pivital aspect of the R language. They allow additional functionality to be added by official vendors and the general public. The content of this book will rely heavily on the `tidyverse` a combination of popular R packages designed to make R more accessable.
+
+Packages can be installed via the `install.packages()` command in the R console. `tidyverse` can be installed as follows.
+
+```{r, eval=FALSE, message=FALSE}
+install.packages("tidyverse")
+```
+
+In order to import a package into a script you are writing, the `library` function can be used.
+
+```{r, eval=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+
+
+```{r, message=FALSE}
+library(xlsx) # install.packages("xlsx")
+
+# Import DALEX for the 'titanic' data set
+library(DALEX) # install.packages("DALEX")
+```

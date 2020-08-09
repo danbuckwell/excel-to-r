@@ -1,0 +1,5 @@
+book_filename: "Converting your Knowledge of Excel into R"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
