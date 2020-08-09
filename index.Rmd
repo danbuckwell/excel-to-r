@@ -27,7 +27,7 @@ This book aims to provide a foundation for translating existing Excel knowledge 
 
 While Excel is great for performing ad-hoc exploration and manipulation of small data sets, bussiness tend to push it's boundaries without fully exploring the alternatives. R is a programming language designed entirely around the manipulation of large data sets. With the addition of community devloped packages, R contains almost all the functionality of Excel without the limitations.
 
-## Notes
+## Notes {-}
 
 ```{r, eval=FALSE}
 bookdown::render_book("index.Rmd")
